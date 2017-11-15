@@ -2,6 +2,10 @@
 
 class Model_Site extends Model {
 
+    /**
+     * return user
+     * @param array $data
+     */
     public function get_user($data) {
         $query = 'SELECT * FROM user where username = :USERNAME AND pass = :PASS';
         $dbh = $this->db->prepare($query);
@@ -16,6 +20,11 @@ class Model_Site extends Model {
         $this->toSession('user', $result[0]);
     }
 
+    /**
+     * 
+     * @param int $userid
+     * @return array money
+     */
     public function get_money($userid) {
         $query = 'SELECT * FROM money where user_id = :USERID';
         $dbh = $this->db->prepare($query);
@@ -23,9 +32,14 @@ class Model_Site extends Model {
         $dbh->execute();
         $result = $dbh->fetchAll();
         return $result[0];
-        //$this->toSession('user', $result[0]);
     }
 
+    /**
+     * set sum money to user
+     * @param int $userid
+     * @param int $sum
+     * @return boolean
+     */
     public function set_money($userid, $sum) {
         $query = 'SELECT * FROM money where user_id = :USERID';
         $dbh = $this->db->prepare($query);
@@ -43,9 +57,14 @@ class Model_Site extends Model {
         return true;
     }
 
-    public function toSession($name, $result) {
+    /**
+     * 
+     * @param string $sessionName
+     * @param array $result
+     */
+    public function toSession($sessionName, $result) {
         session_start();
-        $_SESSION[$name] = [
+        $_SESSION[$sessionName] = [
             'name' => $result['username'],
             'id' => $result['id']
         ];

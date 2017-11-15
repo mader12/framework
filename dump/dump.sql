@@ -16,14 +16,14 @@ DROP TABLE IF EXISTS `money`;
 CREATE TABLE IF NOT EXISTS `money` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
-  `money` int(11) NOT NULL DEFAULT '0',
+  `money` decimal(10,2) NOT NULL DEFAULT '0.00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы test.bit.money: ~0 rows (приблизительно)
 /*!40000 ALTER TABLE `money` DISABLE KEYS */;
 INSERT INTO `money` (`id`, `user_id`, `money`) VALUES
-	(1, 4, 900);
+	(1, 4, 100.00);
 /*!40000 ALTER TABLE `money` ENABLE KEYS */;
 
 -- Дамп структуры для таблица test.bit.user
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы test.bit.user: ~1 rows (приблизительно)
+-- Дамп данных таблицы test.bit.user: ~2 rows (приблизительно)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `username`, `pass`) VALUES
 	(4, 'admin', 'e10adc3949ba59abbe56e057f20f883e');

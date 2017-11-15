@@ -1,7 +1,11 @@
 <?php
 
 class Route {
-
+    
+    /**
+     * Go routing
+     * @param pdo connection $DB 
+     */
     static function start($DB) {
 
         // default
@@ -34,7 +38,7 @@ class Route {
         if (file_exists($controller_path)) {
             include "app/controllers/" . $controller_file;
         } else {
-            Route::ErrorPage404();
+            self::ErrorPage404();
         }
 
         $controller = new $controller_name($DB);
@@ -43,11 +47,14 @@ class Route {
         if (method_exists($controller, $action)) {
             $controller->$action();
         } else {
-            Route::ErrorPage404();
+            self::ErrorPage404();
         }
     }
-
-    function ErrorPage404() {
+    
+    /**
+     * go to error page 404
+     */
+    public static function ErrorPage404() {
         $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
         header('HTTP/1.1 404 Not Found');
         header("Status: 404 Not Found");
