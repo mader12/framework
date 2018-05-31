@@ -1,5 +1,5 @@
 {
-    "name": "mad/mad-fr",
+    "name": "mad/mad-framewsork",
     "description": "mad easy test framework",
     "license": "GNU GPL",
     "type": "mad - framework",
@@ -13,6 +13,6 @@
     ],
     "require": {
         "twbs/bootstrap": "4.1.1",
-        "mad/mad-frm":"0.1"
+        "mad/mad-frm":"*"
     }
 }
