@@ -1,0 +1,14 @@
+{
+    "name": "mad/framework",
+    "description": "framework",
+    "license": "GNU GPL",
+    "authors": [
+        {
+            "name": "Drozhzhinov",
+            "email": "mader12@yandex.ru"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "4.1.1"
+    }
+}
