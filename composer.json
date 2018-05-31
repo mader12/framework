@@ -1,14 +1,18 @@
 {
-    "name": "mad/framework",
-    "description": "framework",
+    "name": "mad/mad-fr",
+    "description": "mad easy test framework",
     "license": "GNU GPL",
+    "type": "mad - framework",
     "authors": [
         {
             "name": "Drozhzhinov",
-            "email": "mader12@yandex.ru"
+            "email": "mader12@yandex.ru",
+            "homepage": "https://github.com/mad",
+            "role": "Developer"
         }
     ],
     "require": {
-        "twbs/bootstrap": "4.1.1"
+        "twbs/bootstrap": "4.1.1",
+        "mad/mad-frm":"0.1"
     }
 }
