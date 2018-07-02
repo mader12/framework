@@ -2,6 +2,7 @@
 
 $config = [
     'db' => [
+        'type' => 'mysql',
         'host' => 'localhost',
         'dbname' => 'test.bit',
         'user' => 'root',

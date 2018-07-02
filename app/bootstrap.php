@@ -2,9 +2,9 @@
 
 require_once 'config/main.php';
 
-$DB = new PDO('mysql:host=' . $config['db']['host'] . ';'
+/*$DB = new PDO('mysql:host=' . $config['db']['host'] . ';'
         . 'dbname=' . $config['db']['dbname'], $config['db']['user'], $config['db']['password']);
-
+*/
 
 require_once 'inc/model.php';
 require_once 'inc/view.php';

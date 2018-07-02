@@ -1,4 +1,7 @@
 /nbproject/private/
 /vendor/
 composer.lock
-nbproject/
+nbproject/*
+nbproject/project.properties
+/nbproject/
+.idea/*
