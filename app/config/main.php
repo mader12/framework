@@ -4,8 +4,10 @@ $config = [
     'db' => [
         'type' => 'mysql',
         'host' => 'localhost',
-        'dbname' => 'test.bit',
+        'dbname' => 'mad',
         'user' => 'root',
         'password' => '123qwe',
     ]
 ];
+
+return $config;
